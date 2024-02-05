@@ -3,15 +3,15 @@ import { Component } from 'react';
 // import Counter from './components/Counter';
 
 class App extends Component {
-  state = { isLoggedIn: true }
+  state = { isLoggedIn: false }
 
   render() {
     const { isLoggedIn } = this.state;
     return (
       <div>
         <h1>Hello World</h1>
-        {/* {isLoggedIn ? <button>Logout</button> : <button>Login</button>} */}
-        {isLoggedIn ? <button>Logout</button> : null}
+        {isLoggedIn && <button>Logout</button>}
+        {!isLoggedIn && <button>Login</button>}
       </div>
     )
   }
