@@ -5,19 +5,19 @@ import { Component } from 'react';
 class App extends Component {
   state = { isLoggedIn: true }
 
-  renderAuthButton = () => {
-    const { isLoggedIn } = this.state;
-    if (isLoggedIn === true) {
-      return <button>Logout</button>
-    }
-    return <button>Login</button>
-  }
-
   render() {
+    const {isLoggedIn} = this.state;
+    let authBtn;
+    if(isLoggedIn === true){
+      authBtn = <button>Logout</button>
+    }else{
+      authBtn = <button>Login</button>
+    }
+
     return (
       <div>
         <h1>Hello World</h1>
-        {this.renderAuthButton()}
+        {authBtn}
       </div>
     )
   }
