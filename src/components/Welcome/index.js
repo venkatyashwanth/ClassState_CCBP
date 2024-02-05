@@ -1,6 +1,11 @@
 const Welcome = (props) => {
-    const {name} = props;
-    return <h1>Hello {name}, I am Functional Component </h1>
+    const {name,greeting} = props;
+    return <h1>Hello {name}, Function: {greeting}</h1>
+}
+
+Welcome.defaultProps = {
+    name: "yashwanth",
+    greeting: "This is default"
 }
     
 export default Welcome 
